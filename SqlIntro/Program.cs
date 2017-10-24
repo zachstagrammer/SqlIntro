@@ -16,12 +16,12 @@ namespace SqlIntro
                                   "Modified Date: \"{0}\"\n", prod.ModifiedDate);
             }
 
-            repo.DeleteProduct(10);
+            repo.DeleteProduct(13);
             Console.WriteLine("You've deleted product with Product ID: ");
 
             var productA = new Product
             {
-                ProductId = 319,
+                ProductId = 15,
                 Name = "My brand new product"
             };
 
@@ -29,8 +29,8 @@ namespace SqlIntro
 
             var productB = new Product()
             {
-                Name = "My new product",
-                ProductId = 13,
+                Name = "My updated product",
+                ProductId = 12,
                 ModifiedDate = DateTime.UtcNow
             };
 
