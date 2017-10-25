@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
 
 namespace SqlIntroDapper
@@ -7,7 +8,7 @@ namespace SqlIntroDapper
     {
         static void Main(string[] args)
         {
-            var connectionString = "Server=localhost;Database=adventureworks;Uid=root;Pwd=unsecuresqlpass;"; //get connectionString format from connectionstrings.com and change to match your database
+            var connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString; //get connectionString format from connectionstrings.com and change to match your database
             var repo = new ProductRepositoryDb(connectionString);
             foreach (var prod in repo.GetProducts())
             {
