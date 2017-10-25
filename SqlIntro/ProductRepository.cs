@@ -52,7 +52,8 @@ namespace SqlIntroDapper
             {
                 conn.Open();
                 var cmd = conn.CreateCommand();
-                cmd.CommandText = "DELETE FROM product WHERE ProductID = " + id;
+                cmd.CommandText = "DELETE FROM product WHERE ProductID = @id";
+                cmd.AddParam("@id", id);
                 cmd.ExecuteNonQuery();
             }
         }
