@@ -53,5 +53,25 @@ namespace SqlIntroDapper
                 conn.Execute("INSERT Product (Name) values (@Name)", new { id = prod.ProductId, name = prod.Name });
             }
         }
+
+        public IEnumerable<Product> GetProductsWithReview()
+        {
+            using (var conn = new MySqlConnection(_connectionString))
+            {
+                conn.Open();
+                Console.WriteLine("Inner join");
+                return conn.Query<Product>("select * from product p inner join productreview pr on p.ProductId");
+            }
+        }
+
+        public IEnumerable<Product> GetProductsAndReview()
+        {
+            using (var conn = new MySqlConnection(_connectionString))
+            {
+                conn.Open();
+                Console.WriteLine("Left join");
+                return conn.Query<Product>("select * from product p left join productreview pr on p.ProductId = pr.ProductId");
+            }
+        }
     }
 }
