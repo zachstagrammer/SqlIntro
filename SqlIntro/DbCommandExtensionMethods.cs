@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace SqlIntro
+namespace SqlIntroDapper
 {
     public static class DbCommandExtensionMethods
     {

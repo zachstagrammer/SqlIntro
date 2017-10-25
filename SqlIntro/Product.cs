@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SqlIntro
+namespace SqlIntroDapper
 {
     public class Product
     {

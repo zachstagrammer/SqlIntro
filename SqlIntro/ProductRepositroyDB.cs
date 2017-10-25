@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using Dapper;
 using MySql.Data.MySqlClient;
 
-namespace SqlIntro
+namespace SqlIntroDapper
 {
-    public class SimpleDB
+    public class ProductRepositoryDb
     {
         private readonly string _connectionString;
 
-        public SimpleDB(string connectionString)
+        public ProductRepositoryDb(string connectionString)
         {
             _connectionString = connectionString;
         }

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace SqlIntro
+namespace SqlIntroDapper
 {
     public class ProductRepository
     {
